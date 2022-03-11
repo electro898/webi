@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Positivityminds</title> 
+<link rel="stylesheet" href="/css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+<meta property="og:image" content="<%- article.x_featured_media_original %>" />
+<meta property="og:url" content="<%- article.x_featured_media_original %>" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="<%- article.title.rendered %>" />
+<meta property="og:description" content="<%- article.title.rendered %>" />
+<meta property="og:locale" content="en_US" />
+<meta property="fb:app_id" content="679501113200139" />
+<meta property="og:site_name" content="positivityminds." />
+<meta property="og:image:type" content="image/jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">Positivityminds</div>
+        <%- include('./partials/search.ejs') %>
+    </header>
+
+    <div class="wrapper">
+        <div class="news-single">
+                <a href="/">&larr;- Back</a>
+                <% if(article != null) { %>
+                    <h2><%- article.title.rendered %></h2>
+                    <p><%- article.content.rendered %></p>
+                <% } else { %>
+                    No posts found.
+                <% } %>
+        </div>
+    </div>  
+</body>
+</html> 
